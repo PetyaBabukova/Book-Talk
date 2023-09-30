@@ -1,139 +1,161 @@
-.userDetails a {
-  color: initial;
+.details-page {
+  padding-top: 60px;
+  padding-bottom: 50px;
 }
 
-.petDescription {
-  font-size: 18px;
-  margin-left: 10px;
+.details-page > h1 {
+  font-size: 44px;
+  text-align: center;
+  color: black;
+  margin-top: -1em;
+  margin-bottom: 0.1em;
+  padding: 5px;
 }
 
-.pet-details {
-  margin: 5px 0 5px -1px;
-}
-
-.comments {
+.details-card {
   display: flex;
-  margin-top: 10px;
-  border-top: 1px solid #ddd;
+  width: 680px;
+  min-height: 400px;
+  height: auto;
+  background-color: #27ae60;
+  margin-bottom: 1.5em;
+  border-radius: 30px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px #00000070;
 }
 
-.comments .userDetails {
-  display: block !important;
-  margin-top: 10px;
-  margin-left: 10px;;
+.details-card-image {
+  position: relative;
 }
 
-.comments span {
-  color: gray;
-  font-size: 10px;
+.details-card-image > img {
+  width: 260px;
+  height: 360px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto auto;
 }
 
-.comments h3 {
-  display: flex;
+.details-card-text {
+  width: 400px;
+  position: relative;
+  height: auto;
+}
+
+.detail-card-text-content {
+  position: relative;
+  width: 250px;
+  height: auto;
+  text-align: center;
+  margin-left: 15px;
+  padding-left: 10px;
+  box-shadow: 0px 0px 20px 0px black;
+}
+
+.details-card-text > h2 {
+  font-size: 23px;
+  text-align: center;
+  line-height: 1.6em;
   word-wrap: break-word;
-  white-space: normal;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: black;
 }
 
-.comments .top {
-  padding: 10px !important;
-}
-
-.comment-data {
-  display: flex;
-  font-size: 10px;
-  word-break: break-all;
-  white-space: normal;
-  font-weight: bold;
-  color: rgb(70, 65, 65);
-}
-
-.comment-data h3 {
-  margin-top: 5px;
-}
-
-.comment-data p {
-  margin-top: 4px;
-  font-size: 13px;
+.details-card-text > h3 {
+  font-size: 14.5px;
+  line-height: 2em;
   word-wrap: break-word;
-  white-space: normal;
-  font-weight: lighter;
+  padding-left: 10px;
+  margin-top: 0.2em;
+  color: black;
 }
 
-.add-comment-details .addComments {
-  margin-top: 0 !important;
+.details-btn:hover {
+  box-shadow: none;
+  background-image: linear-gradient(to left, violet, rgb(41, 151, 151));
 }
 
-.edit-delete-btns {
-  position: absolute;
-  top: 20px;
-  right: 10px;
+.buttons {
+  margin-top: 10%;
+  position: relative;
+  text-align: center;
+  bottom: 2%;
 }
 
-.edit-delete-btns img {
-  width: 20px;
-  margin-left: 5px;
-}
-
-.message {
-  font-weight: 400;
-  margin-top: 5px;
-  font-size: 14px;
-  color: #777;
-  line-height: 1.5em;
-}
-
-.message b {
-  color: #262626;
-}
-
-.message span {
-  cursor: pointer;
-  color: #1d92ff;
-}
-
-.addComments {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-  border-top: 1px solid #ddd;
-  padding: 10px 0;
-}
-
-.addComments button {
-  position: absolute;
-  right: 30px;
-  color: #1d92ffcb;
-  font-weight: 500;
-  font-size: 15px;
+.buttons > .wish-pub {
+  color: #fff;
   border: none;
-  background-color: inherit;
-  cursor: pointer;
-}
-
-#comment-textarea {
-  position: absolute;
-  left: 30px;
-  width: 85%;
-  resize: none;
-  overflow: hidden;
-  height: 20px;
-  border: none;
+  padding: 5px;
   outline: none;
-  font-weight: 400;
-  font-size: 14px;
-  color: #262626;
-  background: none;
+  font-size: 15.3px;
+  width: 250px;
+  margin-left: 5em;
+  font-weight: 600;
+  margin-top: 1.3em;
+  border-radius: 9px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 300ms ease-in-out;
+  -o-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  border-color: gray;
+  border-style: outset;
+  border-width: 3px;
+  background-color: rgb(113, 81, 155);
 }
 
-textarea.text::placeholder {
-  color: #777;
+.btn-edit,
+.btn-delete,
+.btn-wish {
+  color: #fff;
+  border: none;
+  padding: 9px;
+  outline: none;
+  font-size: 15.3px;
+  font-weight: 600;
+  margin-top: 40px;
+  border-radius: 9px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 300ms ease-in-out;
+  -o-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  border-color: gray;
+  border-style: outset;
+  border-width: 3px;
 }
 
-.addComments form label {
-  display: none;
+.btn-edit:hover,
+.btn-delete:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-.addComments form {
-  display: flex;
-  margin-bottom: 15px;
+.btn-edit {
+  background-color: #428aa0;
+}
+
+.btn-edit:hover {
+  background-color: #387183;
+}
+
+.btn-delete {
+  background-color: #f15505;
+}
+
+.btn-delete:hover {
+  background-color: #da4c06;
+}
+
+.btn-wish {
+  background-color: #595c61;
+}
+
+.btn-wish:hover {
+  background-color: #4b4d50;
 }

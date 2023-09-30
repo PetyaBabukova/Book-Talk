@@ -1,122 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Starts Head Section -->
 
 <head>
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/static/images/free-30-instagram-stories-icons23_122570.png">
-    <title>Petstagram</title>
-</head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Page</title>
+    <link rel="stylesheet" href="./css/style.css" />
 
-<!-- Starts Body Section -->
+</head>
 
 <body>
 
-    <!-- Starts Header Section with Navigation Bar -->
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <!-- Link to Home Page -->
-                    <a href="#">
-                        <img width="50px" src="/static/images/free-30-instagram-stories-icons23_122570.png" alt="img1">
-                    </a>
+    <!-- In case of error, you should display div with class "errorContainer" -->
+    <!-- You can choose to display the first error or all of them (error message/s in your opinion) -->
+    <!-- <div>
+        <div class="errorContainer">
+            <p>Error</p>
+        </div>
+    </div> -->
 
-                    <!-- Link to Home Page -->
-                    <a class="home" href="#">
-                        <i>Petstagram</i>
-                    </a>
-                </div>
+    <header class="header">
 
-                <div class="nav-links">
-                    <ul class="nav-group">
-                        <li class="nav-item">
-                            <!-- Link to Catalog Page -->
-                            <a href="#">
-                                <i>Catalog</i>
-                            </a>
-                        </li>
+        <div class="header">
+            <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="#">Catalog</a>
+                <!--Only for logged user-->
+                <a href="#">Profile</a>
+                <a href="#">Create Review</a>
+                <a href="#">Logout</a>
+                <!--Only for guest-->
+                <a href="#">Login</a>
+                <a href="#">Register</a>
+            </nav>
+        </div>
 
-                        <!--For Guest User-->
-                        <li class="nav-item">
-                            <!-- Link to Login Page -->
-                            <a href="#">
-                                <i>Login</i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- Link to Register Page -->
-                            <a href="#">
-                                <i>Register</i>
-                            </a>
-                        </li>
-
-                        <!--For login users-->
-                        <li class="nav-item">
-                            <!-- Link to Add Photo Page -->
-                            <a href="#">
-                                <i>Add Photo</i>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <!-- Link to Profile Page -->
-                            <a href="#">
-                                <i>Profile</i>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <!-- Link to Logout Page -->
-                            <a href="#">
-                                <i>Logout</i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
     </header>
 
-    <!-- Starts Main Section -->
-    <main>
-        <!-- Start Add Photo Section -->
-        <div class="editPage">
-            <h2>Edit photo</h2>
-            <!-- Start Add Photo Form -->
-            <form action="">
-                <p>
-                    <input type="text" name="" placeholder="Name" value="Sal">
-                </p>
+    <section class="edit-form-container">
 
-                <p>
-                    <input type="number" name="" placeholder="Age" value="4">
-                </p>
-
-                <p>
-                    <textarea type="text" name="" placeholder="Description">This is my pet!</textarea>
-                </p>
-
-                <p>
-                    <input type="text" name="" placeholder="Location" value="Bansko, Bulgaria">
-                </p>
-
-                <p>
-                    <input type="text" name="" placeholder="Link to image" value="/static/images/axolotl.jpeg">
-                </p>
-                <!-- Add Photo Button -->
-                <button class="edit-btn" type="submit">Edit Photo</button>
-            </form>
-        </div>
-    </main>
-
-    <!-- Start Footer Section -->
-    <div class="footer">
-        <span class="footer-section">
-            © 2023 SoftUni Back-End Exam
-        </span>
-    </div>
-
+        <form action="">
+            <h3>Edit Book Review</h3>
+            <label>Title</label>
+            <input type="text" name="" class="box" value="Harry Potter and the Philosopher's Stone" id="">
+            <label>Author</label>
+            <input type="text" name="" class="box" value="JK Rowling" id="">
+            <label>Genre</label>
+            <input type="text" name="" class="box" value="Fantasy" id="">
+            <label>Stars</label>
+            <input type="number" name="" class="box" value="5" id="">
+            <label>Image</label>
+            <input type="text" name="" class="box" value="http:..." id="">
+            <label>Review</label>
+            <textarea class="box"
+                name="">Harry Potter and the Philosopher's Stone is one of my favourite books in the Harry Potter series. Reading this book has made me crazy about Harry Potter and I wish to be one among the magical community. I can't imagine how thrilled I would be if I get a letter from Dumbledore saying that I am admitted to Hogwarts!!!!!!!</textarea>
+            <input type="submit" value="Edit" class="btn">
+        </form>
+    </section>
 </body>
 
 </html>
