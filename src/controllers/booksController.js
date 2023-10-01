@@ -78,18 +78,43 @@ router.get('/:bookId/wish', async (req, res) => {
     }
 });
 
-// router.get('/:bookId/delete', async (req, res)=>{
+router.get('/:bookId/delete', async (req, res) => {
 
-//     try {
-//         const bookId = req.params.bookId;
-//         await booksManager.delete(bookId);
-//         res.render('books')
+    try {
+        const bookId = req.params.bookId;
+        await booksManager.delete(bookId);
+        res.redirect('/books')
 
-//     } catch (error) {
-//         res.redirect(`/books/${bookId}/details`, { error: 'Unsuccessful deletion' })
-//     }
+    } catch (error) {
+        res.redirect(`/books/${bookId}/details`, { error: 'Unsuccessful deletion' })
+    }
 
-// })
+})
+
+router.get('/:bookId/edit', async (req, res) => {
+    const bookId = req.params.bookId;
+
+    try {
+        const book = await booksManager.getOne(bookId).lean();
+        res.render('books/edit', { book })
+
+    } catch (error) {
+        res.render('/404')
+    }
+});
+
+router.post('/:bookId/edit', async (req, res) =>{
+    const bookId = req.params.bookId;
+    const bookData = req.body
+
+    try {
+        const book = await booksManager.edit(bookId, bookData);
+        res.redirect('/books');
+    } catch (error) {
+        res.render('books/edit', { error: 'Unable to update book', ...bookData })
+    }
+
+})
 
 
 

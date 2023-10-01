@@ -15,5 +15,6 @@ exports.wish = async (bookId, userId) => {
     return book;
 };
 
+exports.delete = (bookId,) => Book.findByIdAndDelete(bookId);
 
-exports.delete = (bookId) => Book.findByIdAndDelete(bookId);
+exports.edit = (bookId, bookData) => Book.findByIdAndUpdate(bookId, bookData);
