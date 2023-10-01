@@ -4,18 +4,20 @@ const bcrypt = require('bcrypt');
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
-        required: [true,'Username is required'],
-        // unique: true,
+        required: [true, 'Username is required'],
+        minlength: 4
     },
 
     password: {
         type: String,
-        required: [true, 'Password is required']
+        required: [true, 'Password is required'],
+        minlength: 3,
     },
 
     email: {
         type: String,
         required: [true, 'Email is required'],
+        minlength: 10,
     }
 });
 
@@ -26,11 +28,11 @@ userSchema.virtual('repeatPassword')
         }
     });
 
-    //hash password
-    userSchema.pre('save', async function () {
-        const hash = await bcrypt.hash(this.password, 10);
-        this.password = hash
-    });
+//hash password
+userSchema.pre('save', async function () {
+    const hash = await bcrypt.hash(this.password, 10);
+    this.password = hash
+});
 
 const User = mongoose.model('User', userSchema);
 

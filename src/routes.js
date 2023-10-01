@@ -8,8 +8,8 @@ router.use('/users', userController);
 router.use('/books', booksController);
 
 
-// router.get('*', (req, res)=>{
-//     res.redirect('/404')
-// });
+router.get('*', (req, res)=>{
+    res.redirect('/404')
+});
 
 module.exports = router;
