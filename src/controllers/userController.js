@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const userManager = require('../managers/userManager');
+const booksManager = require('../managers/booksManager');
 const { TOKEN_KEY } = require('../config/config');
 const { getErrorMessage } = require('../utils/errorHelpers');
 
@@ -46,6 +47,7 @@ router.get('/logout', (req, res) => {
     res.clearCookie('token');
 
     res.redirect('/');
-})
+});
+
 
 module.exports = router;
